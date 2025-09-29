@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-declare const aituBridge: any; // чтобы TS не ругался
+
+import aituBridge from '@btsd/aitu-bridge';
 
 const AituPhoneTest = () => {
   const [supported, setSupported] = useState<boolean>(false);
@@ -13,7 +14,7 @@ const AituPhoneTest = () => {
         setSupported(true);
         aituBridge
           .getPhone()
-          .then((result: string) => {
+          .then((result: any) => {
             setPhone(result);
           })
           .catch((err: any) => {
