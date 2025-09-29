@@ -91,7 +91,7 @@ import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { ChevronRight } from "lucide-react";
 import aituBridge from '@btsd/aitu-bridge';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AituPhoneTest from "../components/AituPhoneTest";
 
 const RoleSelection = () => {
