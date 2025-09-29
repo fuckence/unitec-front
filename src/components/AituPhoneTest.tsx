@@ -3,13 +3,8 @@ import { useEffect, useState } from "react";
 
 import aituBridge from '@btsd/aitu-bridge';
 
-interface IPhone{
-    phone: string
-}
-
 const AituPhoneTest = () => {
   const [supported, setSupported] = useState<boolean>(false);
-    const [phone, setPhone] = useState<IPhone>()
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
