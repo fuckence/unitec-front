@@ -96,7 +96,6 @@ import AituPhoneTest from "../components/AituPhoneTest";
 
 const RoleSelection = () => {
   const navigate = useNavigate();
-  const [date,setDate] = useState(null)
   const { t } = useTranslation();
 
   const handleRoleSelect = (role: "admin" | "user") => {
@@ -107,7 +106,7 @@ const RoleSelection = () => {
   async function getData() {
   try {
     const data = await aituBridge.getMe();
-    setDate(data);
+    // setDate(data);
     console.log(data);
   } catch (e) {
     console.log('ssss');
