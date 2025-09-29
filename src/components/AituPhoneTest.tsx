@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 
 import aituBridge from '@btsd/aitu-bridge';
 
+interface IPhone{
+    phone: string
+}
+
 const AituPhoneTest = () => {
   const [supported, setSupported] = useState<boolean>(false);
-
+    const [phone, setPhone] = useState<IPhone>()
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -13,7 +17,7 @@ const AituPhoneTest = () => {
       if (aituBridge && aituBridge.isSupported()) {
         setSupported(true);
         aituBridge
-          .getPhone()
+          .getPhone().then(res => {alert(res)})
           .catch((err: any) => {
             console.error("Ошибка при вызове getPhone:", err);
             setError(String(err));
