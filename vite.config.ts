@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    allowedHosts: ['*'],
+    allowedHosts: ['unitec-front.onrender.com'],
     host: true,   // разрешает доступ с локальной сети
     port: 5174,   // можно изменить порт при необходимости
   },
