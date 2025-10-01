@@ -127,7 +127,6 @@ const RoleSelection = () => {
         <div className="mb-6 w-32 h-20 rounded-full flex items-center justify-center">
           <img className="text-3xl" src="public/images/solo nitec logo.png" alt="logo" />
         </div>
-
         <div className="p-6 z-10">
           <h1 className="text-2xl bold text-gray-900 text-center mb-2">
             {t("roleSelection.title")}
